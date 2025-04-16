@@ -17,6 +17,8 @@ def download():
     output_path = f"{unique_id}.%(ext)s"
 
     ydl_opts = {
+        'quiet': True,
+        'skip_download': True,
         'format': 'bestaudio/best' if format_type == 'audio' else 'best',
         'outtmpl': output_path,
         'cookiefile': 'cookies.txt',
