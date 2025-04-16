@@ -19,6 +19,7 @@ def download():
     ydl_opts = {
         'format': 'bestaudio/best' if format_type == 'audio' else 'best',
         'outtmpl': output_path,
+        'cookiefile': 'cookies.txt',
     }
 
     try:
